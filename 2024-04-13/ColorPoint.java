@@ -12,8 +12,6 @@ public class ColorPoint extends Point2 {
 		super.showPoint();
 		System.out.println("color:" + color);
 
-	}
-
 	public String getColor() {
 		return color;
 	}
