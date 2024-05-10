@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Bootstrap5</title>
-   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- 以下navbarセクション -->
     <nav class="navbar navbar-expand-lg bg-dark py-3">
@@ -14,65 +18,97 @@
         <!-- <div class="container-fluid">だとどの表示でも100パーの大きさで出力されるので今回はfluidを削除 -->
         <div class="container">
 
-          <a class="navbar-brand" href="#">
-            <h2 class="text-white pt-1">Bootstrap5</h2>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link " href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sercices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Feautures</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Project</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-              <button type="button" class="btn btn-primary ms-2" >join us</button>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-<!-- hero section -->
-<!-- vh=ビューポート(縦の表示領域) -->
-<!-- d-flex　コンテナをフレックス要素にする -->
-<div class="hero vh-100 d-flex align-items-center" id="home">
-    <!-- bootStrap特有のレスポンシブ対応の幅指定ができる -->
-    <div class="container">  
-        <div class="row">
-            <!-- col=colum 列  breakpointが992px以上(lg)のときはcontainerで12分割したうちの7分割を占めてください。-->
-            <!-- m=margin　x=右と左を auto=左右に自動で余白を設ける=中央ぞろえ -->
-            <!-- col-lg-7を 4とかにすると狭くなる -->
-            <div class="col-lg-7 mx-auto text-center" >
-                <!-- 通常のh1タグより目立たせたいのでdisplay -->
-                <h1 class="display-4 text-white">Bootstrap5 Page</h1>
-                <!-- lorem ○○(数字)と入力すると○○単語のダミーテキストができる -->
-                <p class="text-white my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio provident adipisci quas, ipsam aspernatur nulla!</p>
-                <a href="#" class="btn btn-primary me-2">Go Page</a>
-                <a href="#"class="btn btn-outline-light">Contact<a>
+            <a class="navbar-brand" href="#">
+                <h2 class="text-white pt-1">Bootstrap5</h2>
+            </a>
+            <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sercices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Feautures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <button type="button" class="btn btn-primary ms-2">join us</button>
+                </ul>
             </div>
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <!-- vh=ビューポート(縦の表示領域) -->
+    <!-- d-flex　コンテナをフレックス要素にする -->
+    <div class="hero vh-100 d-flex align-items-center" id="home">
+        <!-- bootStrap特有のレスポンシブ対応の幅指定ができる -->
+        <div class="container">
+            <div class="row">
+                <!-- col=colum 列  breakpointが992px以上(lg)のときはcontainerで12分割したうちの7分割を占めてください。-->
+                <!-- m=margin　x=右と左を auto=左右に自動で余白を設ける=中央ぞろえ -->
+                <!-- col-lg-7を 4とかにすると狭くなる -->
+                <div class="col-lg-7 mx-auto text-center ">
+                    <!-- 通常のh1タグより目立たせたいのでdisplay -->
+                    <h1 class="display-4 text-white">Bootstrap5 Page</h1>
+                    <!-- lorem ○○(数字)と入力すると○○単語のダミーテキストができる -->
+                    <p class="text-white my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio provident
+                        adipisci quas, ipsam aspernatur nulla!</p>
+                    <a href="#" class="btn btn-primary me-2">Go Page</a>
+                    <a href="#" class="btn btn-outline-light">Contact<a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</body>
-</html>
+    </div>
+	
+	    <!-- service section -->
+	    <section id="Sercices">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-md-8 mx-auto text-center">
+	                    <h6 class="text-primary">SERVICES</h6>
+	                    <h1>Services</h1>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, sed deleniti corrupti
+	                        impedit recusandae.</p>
+	                </div>
+	            </div>
+	
+	            <div class="row">
+	                <div class="col-lg-4 col-sm-6">
+	                    <div class="service card-effect">
+	                        <div class="iconbox">
+	                            <i class="bx bxs-comment-detail"></i>
+	                        </div>
+	                        <h5>Service</h5>
+	                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet debitis repellat deserunt
+	                            quae quidem.</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+	        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+	        crossorigin="anonymous"></script>
+	</body>a
+	
+	</html>
