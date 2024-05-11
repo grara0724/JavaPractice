@@ -5,6 +5,12 @@
     --primary: #0d6efd;
     --dark: #21252f;
     --body: #888;
+    /* offset-x | offset-y | blur-radius | spread-radius | color
+【offset-x,offset-y】：x,y方向へ影を延ばす距離
+【blur-radius】：影をぼかす度合い
+【spread-radius】：影の広がりの度合い
+(正の値が指定された場合、影がその分だけ拡張され大きくなり、負の値が指定された場合、影は縮小される。)
+【color】：色 */
     --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 
 }
@@ -107,4 +113,140 @@ section {
     font-size: 32px;
     background-color: var(--primary);
     border-radius: 100px;
+    flex: none;
+}
+
+.service {
+    position: relative;
+    overflow: hidden;
+}
+
+.service::after {
+    position: absolute;
+    content: "";
+    background-color: var(--primary);
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    opacity: 0;
+    transition: all 0.35s ease;
+    z-index: -1;
+}
+
+.service:hover h5,
+.service:hover p {
+    color: white;
+}
+
+.service:hover .iconbox {
+    background-color: #fff;
+    color: var(--primary);
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.col-img {
+    background-image: url(./img/cover2.jpg);
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* projects section */
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.project .overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 39, 71, 0.7);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.project img {
+    transition: all 0.4s ease;
+}
+
+img {
+    width: 100%;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+/* team section */
+.team-member img {
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left: 5px;
+    transition: all 0.4s ease;
+}
+
+.social-icons a:hover {
+    color: #0d6efd;
+    /* 背景をなくす */
+    background-color: transparent;
+}
+
+form input.form-control {
+    height: 56px;
+}
+
+form .form-control {
+    border: transparent;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.04)
+}
+
+.footer-top {
+    background-color: var(--dark);
+    padding: 90px;
+    padding-bottom: 90px;
+}
+
+.footer-top a {
+    color: var(--body);
+}
+
+.footer-top a:hover {
+    color: #fff
 }
